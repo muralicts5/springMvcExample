@@ -11,7 +11,7 @@ $(document).ready(function(){
 				console.log({'username':username, 'password':password });
 				$.post("http://localhost:8080/authenticate", {'username':username, 'password':password},  function(data, result){
 					alert('123');
-					localStorage.setItem("token",data['token'])
+					localStorage.setItem("token",data)
 					window.location.href ="http://localhost:4780/home";
 				});		
 			});
